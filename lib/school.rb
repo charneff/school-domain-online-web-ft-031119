@@ -6,7 +6,7 @@ class School
     @roster = {}
   end
 
-  def add_student(student_name, grade)
+  def add_student(grade, student_name)
     roster[grade] ||= []
     roster[grade] << student_name
   end
@@ -16,6 +16,7 @@ class School
   end
 
   # this method should arrange the students in each grade by alphabetical order
+  
   def sort
     sorted = {}
     roster.each do |grade, students|
